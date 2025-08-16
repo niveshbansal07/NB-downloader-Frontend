@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloader - Professional YouTube Video Downloader</title>
+    <meta name="description" content="Download high-quality YouTube videos with merged best video and audio streams. Professional, fast, and secure.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="assets/favicon.ico" alt="NB Downloader Logo" class="nav-logo">
+                <span class="nav-title">Downloader</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Download YouTube Videos in
+                        <span class="gradient-text">Best Quality</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Professional YouTube video downloader with merged high-quality video and audio streams. 
+                        Fast, secure, and completely free.
+                    </p>
+                    
+                    <!-- Download Form -->
+                    <div class="download-form">
+                        <div class="input-group">
+                            <input 
+                                type="url" 
+                                id="videoUrl" 
+                                class="url-input" 
+                                placeholder="Paste YouTube URL here..."
+                                autocomplete="off"
+                            >
+                            <div class="input-actions">
+                                <button type="button" id="previewBtn" class="btn btn-secondary">
+                                    <span class="btn-icon">👁️</span>
+                                    Preview
+                                </button>
+                                <button type="button" id="downloadBtn" class="btn btn-primary">
+                                    <span class="btn-icon">⬇️</span>
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Section -->
+                    <div id="progressSection" class="progress-section hidden">
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div id="progressFill" class="progress-fill"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span id="progressStatus">Processing...</span>
+                                <span id="progressPercent">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preview Section -->
+        <section id="previewSection" class="preview-section hidden">
+            <div class="preview-container">
+                <div class="preview-card">
+                    <div class="preview-header">
+                        <h3>Video Preview</h3>
+                        <button id="closePreview" class="close-btn">×</button>
+                    </div>
+                    <div class="preview-content">
+                        <div class="video-thumbnail">
+                            <img id="videoThumbnail" src="" alt="Video thumbnail">
+                            <div class="video-duration" id="videoDuration"></div>
+                        </div>
+                        <div class="video-info">
+                            <h4 id="videoTitle" class="video-title"></h4>
+                            <p id="videoUploader" class="video-uploader"></p>
+                            <div class="video-stats">
+                                <span id="videoViews" class="video-stat"></span>
+                                <span id="videoLikes" class="video-stat"></span>
+                            </div>
+                            <div class="video-qualities">
+                                <span class="quality-label">Available Qualities:</span>
+                                <div id="videoQualities" class="quality-badges"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="preview-actions">
+                        <button id="downloadFromPreview" class="btn btn-primary btn-large">
+                            <span class="btn-icon">⬇️</span>
+                            Download Video
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="features-container">
+                <h2 class="section-title">Why Choose NB Downloader?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎥</div>
+                        <h3>High Quality</h3>
+                        <p>Download videos in the best available quality with merged video and audio streams.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Fast & Efficient</h3>
+                        <p>Optimized processing ensures quick downloads with progress tracking.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Secure</h3>
+                        <p>No permanent file storage. All processing is done securely with temporary files.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Responsive</h3>
+                        <p>Works perfectly on desktop, tablet, and mobile devices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="about-container">
+                <h2 class="section-title">About NB Downloader</h2>
+                <div class="about-content">
+                    <p>
+                        NB Downloader is a professional YouTube video downloader that combines cutting-edge technology 
+                        with a beautiful, user-friendly interface. Our service uses advanced algorithms to extract 
+                        the best quality video and audio streams, then merges them seamlessly for optimal viewing experience.
+                    </p>
+                    <p>
+                        Built with modern web technologies and designed with user experience in mind, 
+                        NB Downloader provides a fast, secure, and reliable way to download your favorite YouTube content.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/favicon.ico" alt="NB Downloader Logo" class="footer-logo">
+                    <span class="footer-title">Downloader</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#home" class="footer-link">Home</a>
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NB Downloader. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Processing your request...</p>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="errorModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Error</h3>
+                <button class="close-btn" onclick="closeErrorModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <p id="errorMessage"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeErrorModal()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

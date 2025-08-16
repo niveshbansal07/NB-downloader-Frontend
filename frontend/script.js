@@ -16,7 +16,7 @@ class NBDownloader {
             return 'http://localhost:8000';
         }
         // For production, you would set this to your actual backend URL
-        return 'https://your-backend-url.com'; // Replace with actual backend URL
+        return 'https://nb-downloader-backend.onrender.com/'; // Replace with actual backend URL
     }
 
     initializeElements() {
@@ -443,3 +443,4 @@ if ('serviceWorker' in navigator) {
             });
     });
 }
+

@@ -10,14 +10,13 @@ class NBDownloader {
         this.initializeAnimations();
     }
 
-    getApiBaseUrl() {
-        // In development, use localhost. In production, this should be your deployed backend URL
-        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-            return 'http://localhost:8000';
-        }
-        // For production, you would set this to your actual backend URL
-        return 'https://nb-downloader-backend.onrender.com'; // Replace with actual backend URL
+getApiBaseUrl() {
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        return 'http://localhost:8000';
     }
+    // Production backend Render link
+    return 'https://nb-downloader-backend.onrender.com'; 
+}
 
     initializeElements() {
         // Form elements
@@ -443,5 +442,6 @@ if ('serviceWorker' in navigator) {
             });
     });
 }
+
 
 

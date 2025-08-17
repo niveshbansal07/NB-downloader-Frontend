@@ -15,7 +15,7 @@ getApiBaseUrl() {
         return 'http://localhost:8000';
     }
     // Production backend Render link
-    return 'https://nb-downloader-backend.onrender.com'; 
+    return 'https://nb-downloader-backend-production.up.railway.app/'; 
 }
 
     initializeElements() {
@@ -442,6 +442,7 @@ if ('serviceWorker' in navigator) {
             });
     });
 }
+
 
 
 
